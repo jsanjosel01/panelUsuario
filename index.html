@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='style.css'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+    <title>panelUsuario</title>
+</head>
+<body>
+
+<!-- Pantalla de registro -->
+  <section id="registro" class="scene login-container">
+
+    <h2>Registro</h2>
+
+    <div class="form-group">
+      <!-- <label>Nombre de usuario/a: </label> -->
+      <input type="text" id="username" placeholder="Nombre de usuario/a:">
+      <div class="error" id="usernameError"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Contraseña: </label>
+      <div class="password-container">
+        <input type="password" id="password">
+        <span id="togglePassword" class="password-toggle">
+            <i class='bx bxs-low-vision'></i> <!--ICONO OJO-->
+        </span>
+      </div>
+      <div class="error" id="passwordError"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Teléfono: </label>
+      <input type="text" id="telefono">
+      <div class="error" id="telefonoError"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Código postal: </label>
+      <input type="text" id="codigoPostal">
+      <div class="error" id="codigoPostalError"></div>
+    </div>
+
+    <div class="form-group ">
+      <div class="checkbox-inline">
+        <input type="checkbox" id="mayorEdad" /> 
+        <label for="mayorEdad">Soy mayor de edad</label>
+      </div>
+    </div>
+
+    <div class="form-group" id="edadGroup" style="display:none;">
+      <label>Edad: </label>
+      <input type="number" id="edad" min="18" max="99">
+      <div class="error" id="edadError"></div>
+    </div>
+
+    <button id="botonRegistrar" disabled>Registrar</button>
+    <p><a href="#" id="goLogin">¿Ya tienes cuenta? Inicia sesión</a></p>
+    <p class="mensaje" id="mensajeRegistro"></p>
+  </section>
+
+   <!-- Pantalla de inicio de sesión -->
+  <section id="login" class="scene active login-container">
+    <h1>Iniciar sesión</h1>
+
+    <div class="form-group">
+      <input type="text" id="loginUser" placeholder="Usuario">
+    </div>
+    <div class="form-group">
+      <input type="password" id="loginPass" placeholder="Contraseña">
+    </div>
+      <button id="btnLogin">Entrar</button>
+      <p><a href="#" id="goRegistro">Registrarse</a></p>
+      <p class="mensaje" id="msgLogin"></p>
+  </section>
+
+  <!-- Panel de usuario, cambiar de tema/cerrar la sesion -->
+  <section id="panel" class="scene login-container">
+    <h2>Bienvenida, <span id="nombreUsuario"></span></h2>
+    <button id="cambiarTema">Cambiar tema</button>
+    <button id="cerrarSesion">Cerrar sesión</button>
+  </section>
+
+  <!-- Cookies -->
+  <div id="cookieBanner" class="cookie-banner">
+      <p>Usamos cookies para mejorar tus preferencias.¿Aceptas?
+      <button id="acceptCookies">Aceptar</button>
+    </p>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+
+</body>
+
+<footer>
+
+</footer>
+</html>
+

@@ -1,0 +1,211 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Body */
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /*gris */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Sesiones */
+.scene {
+    display: none; /* None, y asi se muestra solo la scena que esta activa */
+    width: 350px;
+    background-color: #b7c0c3; /* gris clarito */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Sombra */
+    text-align: center;
+}
+
+/* Sección activa */
+.scene.active {
+    display: block;
+}
+
+/* Títulos */
+h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Botones */
+button {
+    width: 30%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #143353; /* Azul oscuro */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2673cc; /*Sombra del boton cuando pasa el ratón*/
+}
+
+#cambiarTema,
+#cerrarSesion {
+    padding: 6px 15px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+/* Enlaces*/
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensajes de error y correcto*/
+.mensaje, .error {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Checkbox (cuadradito pequeño)*/
+.checkbox-inline {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-inline input {
+    margin-right: 8px;
+}
+
+/* Icono ojo*/
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+
+/* Banner de cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:  #143353; /* Azul del tema */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.cookie-banner button {
+    width: 25%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0066cc; /* Botón azul oscuro */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /*Transación*/
+    
+}
+
+.cookie-banner button:hover {
+    background-color: #004999;
+}
+
+/*Modo dark(oscuro)*/
+/* Cambiar de tema, dark */
+body.dark-mode {
+    background-color: #101010;
+    color: #f4f2f2;
+}
+
+/* Cuadros de los formularios */
+body.dark-mode .scene {
+    background-color: #1c1c1c; 
+    box-shadow: 0 8px 16px rgba(255,255,255,0.1);
+}
+
+/* Inputs */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="number"] {
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    color: #ffffff;
+}
+
+/* Botones */
+body.dark-mode button {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+body.dark-mode button:hover {
+    background-color: #777777;
+}
+
+/* Enlaces */
+body.dark-mode a {
+    color: #87ceeb;
+}
+
+/* Banner de cookies */
+body.dark-mode .cookie-banner {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+body.dark-mode .cookie-banner button {
+    background-color: #555555;
+}
+
+body.dark-mode .cookie-banner button:hover {
+    background-color: #777777;
+}
