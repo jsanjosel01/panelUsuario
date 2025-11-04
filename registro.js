@@ -84,7 +84,7 @@ export function initRegistro(showScene) {
     // Validaciones básicas
     if (!user || !pass || !tel || !cp || (!mayorEdad.checked && !userEdad)) {
       mensajeRegistro.style.color = 'red';
-      mensajeRegistro.textContent = 'Por favor, completa todos los campos.'; //CAMBIARRRRR
+      mensajeRegistro.textContent = 'Completa todos los campos.'; 
       return;
     }
 
