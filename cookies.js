@@ -12,13 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getCookie(name) {
-        const match = document.cookie.match(new RegExp('(^| )'+name+'=([^;]+)'));
-        return match ? match[2] : null;
-    }
+       return document.cookie
+    .split('; ')
+    .find(row => row.startsWith(name + '='))
+    ?.split('=')[1];
+}
 
-    // Mostrar banner sí no se ha aceptado
-    if (!getCookie('cookiesAccepted')) {
-        cookieBanner.style.display = 'flex';
+    // Mostrar cookie sí no se ha aceptado
+   if (!getCookie('cookiesAccepted')) {
+    cookieBanner.style.display = 'flex';
+    } else {
+    cookieBanner.style.display = 'none';
     }
 
     // Sí acepta las cookies, se guarda durante 1año

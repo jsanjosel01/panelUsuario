@@ -17,11 +17,11 @@ export function initLogin(showScene) {
   const msg = document.getElementById('msgLogin');
   const goRegistro = document.getElementById('goRegistro');
 
-  //esto nuevo para ver si lo pinta!! MIRAR ESTOOO
+  // Para ver si lo pinta!! 
   console.log('loginUser input:', user);
   console.log('btnLogin button:', btn);
 
-
+  
   // Ir a registro
   goRegistro.addEventListener('click', (e) => {
     e.preventDefault();

@@ -1,4 +1,5 @@
 // registro
+
 export function initRegistro(showScene) {
   const registroSection = document.getElementById('registro');
 
